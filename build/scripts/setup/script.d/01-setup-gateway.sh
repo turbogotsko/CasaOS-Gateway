@@ -15,8 +15,6 @@ __get_setup_script_directory_by_os_release() {
 		{
 			source /etc/os-release
 			{
-				pushd "${ID}"/"${VERSION_CODENAME}" >/dev/null
-			} || {
 				pushd "${ID}" >/dev/null
 			} || {
                 [[ -n ${ID_LIKE} ]] && for ID in ${ID_LIKE}; do
